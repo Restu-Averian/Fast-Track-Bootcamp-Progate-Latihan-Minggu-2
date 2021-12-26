@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Get a FizzBuzz Result!</h1>
+    <label for="number">Type a number</label>
+    <input type="number" name="" id="input">
+    <button>Click here !</button>
+    <hr>
+    <p id="result"></p>
+    <script>
+        const btn = document.querySelector("button");
+        const result = document.getElementById("result");
+        btn.addEventListener('click', function () {
+            for (let i = 0; i < 1; i++) {
+                const input = document.getElementById("input").value;
+                const hasil = document.createElement("hasil");
+                if (input == false) {
+                    hasil.innerHTML = "invalid input<br>"
+                } else if (input % 3 == 0 && input % 5 == 0) {
+                    hasil.innerHTML = "FizzBuzz<br>"
+                } else if (input % 3 == 0) {
+                    hasil.innerHTML = "Fizz<br>";
+                } else if (input % 5 == 0) {
+                    hasil.innerHTML = "Buzz<br>";
+                } else if (input == 89) {
+                    hasil.innerHTML = 89 + "<br>";
+                } else {
+                    hasil.innerHTML = "Di luar ketentuan<br>"
+                }
+                result.append(hasil);
+            }
+        });
+    </script>
+</body>
+
+</html>

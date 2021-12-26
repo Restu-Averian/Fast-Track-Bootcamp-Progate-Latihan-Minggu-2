@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Program Horoskop</h1>
+    <button>Click here !</button>
+    <p>Keberuntungan anda hari ini : </p>
+    <hr>
+    <p id="result"></p>
+    <script>
+        const btn = document.querySelector("button");
+        const result = document.getElementById("result");
+        btn.addEventListener('click', function () {
+            for (let i = 0; i < 1; i++) {
+                const randomNumber = Date.now();
+                console.log(randomNumber);
+                const hasil = document.createElement("hasil");
+                if (randomNumber % 2 == 0) {
+                    hasil.innerHTML = "Hebat !!<br>";
+                } else if (randomNumber % 3 == 0) {
+                    hasil.innerHTML = "Boleh juga !<br>";
+                } else {
+                    hasil.innerHTML = "Mengerikan...<br>";
+                }
+                result.append(hasil);
+
+            }
+
+        });
+    </script>
+</body>
+
+</html>
